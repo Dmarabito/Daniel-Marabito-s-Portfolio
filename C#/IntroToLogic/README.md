@@ -3,3 +3,4 @@
 # Madlib was the second lab of my class. Was a simple madlib.
 # AdditionCalc adds 2 numbers together
 # rectangle, calculates area and perimeter of a rectangle.
+# Circle, calculates the circumference and area of a circle with a given radius.
