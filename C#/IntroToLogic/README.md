@@ -6,3 +6,4 @@
 # Circle, calculates the circumference and area of a circle with a given radius.
 # MathQuiz is a basic math quiz that tracks the number of correct answers given
 # RangeCheck takes input and categorizes it as average or not.
+# HutHike Lists numbers from 0 to 100, but replaces some numbers.
