@@ -9,3 +9,4 @@
 # HutHike Lists numbers from 0 to 100, but replaces some numbers.
 # HighLowGuess has user guess a random number and gives feedback.
 # primeNumber lists all primes within a range.
+# DiceRollerMinusArrays List the frequencies of 2 dice rolled without using an array
