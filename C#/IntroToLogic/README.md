@@ -8,3 +8,4 @@
 # RangeCheck takes input and categorizes it as average or not.
 # HutHike Lists numbers from 0 to 100, but replaces some numbers.
 # HighLowGuess has user guess a random number and gives feedback.
+# primeNumber lists all primes within a range.
