@@ -1,4 +1,4 @@
-# This program will go to the directoy stored in the String ImageDir, which by default is C:/image.
+# This program (RandomImage.pde) will go to the directoy stored in the String ImageDir, which by default is C:/image.
 # From that directory a random file is selected. The file is then varified to be an image based on extention.
 # As the verification is just based on the extention it filters out stupidity and not malice. As it could select a file with an image extention that isn't an image.
 # I am not certain what that would do to it.
