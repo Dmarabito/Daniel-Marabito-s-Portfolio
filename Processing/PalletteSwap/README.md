@@ -11,3 +11,7 @@
 # anyways after that tangent on how it gets the equivalent colors it then goes to the main images pixel array and replaces them based on the reduced array. So it matches the current color to the color in the reduced array which then coresponds to what the color should become in the final image.
 
 # after it is done replacing it the code insists that you save the image using selectoutput to choose where. The way I coded it basically makes it loop back to selecting an output if you try to cancel. I may in the next version make it a bit kinder and let you choose not to save it with then a click on the image to recall it. We shall see. Also the image is displayed on screen.
+
+# MeInPalletteA.png is an example of the output of PalletteSwap.pde, it was made with a picture of me and a pallete made in inkscape using screenshots of pallete from https://coolors.co/
+
+# I did discover in making various images that it works best if you have a image with fewer colors as your pallette, otherwise the resulting image could look alot like the original image just due to the colors happening to be in the image, or very similar colors being in the image.
