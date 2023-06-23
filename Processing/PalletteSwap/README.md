@@ -15,3 +15,5 @@
 # MeInPalletteA.png is an example of the output of PalletteSwap.pde, it was made with a picture of me and a pallete made in inkscape using screenshots of pallete from https://coolors.co/
 
 # I did discover in making various images that it works best if you have a image with fewer colors as your pallette, otherwise the resulting image could look alot like the original image just due to the colors happening to be in the image, or very similar colors being in the image.
+
+# So I made PalletteSwapV2.pde the main improvement is I took most of the code out of the setup() function and made it into its own thread. This then allowed me to add a Status variable to store where the code is, and to let the draw function run at the same time to update the image to display the text. Alot of the code was copy/pasted from the previous version with minor tweaks.
