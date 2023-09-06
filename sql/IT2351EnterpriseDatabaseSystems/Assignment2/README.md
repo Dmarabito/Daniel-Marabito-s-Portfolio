@@ -6,3 +6,4 @@
 # StepE is a modificaton of StepD but includes another inner join to add some more info, and combining first and last name.
 # StepF has another join adding some more feild to stepE.
 # StepG is a modified StepF, but I add a line that does some multiplication and I add a line limiting the rows to those with a null ship date.
+# StepH is mainly about creating a calculated feild, using multiplcation, and rounding. It also involves an inner join and aliases
