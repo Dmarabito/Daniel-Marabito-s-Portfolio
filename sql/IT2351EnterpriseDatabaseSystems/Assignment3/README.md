@@ -3,3 +3,4 @@
 # part 3 involved using a join, distinct and quantity.
 # Part 4 is mainly about using rollup
 # Part 5 is applying an if grouping to remove nulls from certain parts of part 4.
+# Part 6 is a new query. Involves doing a group by and a sum with a bit more math.
