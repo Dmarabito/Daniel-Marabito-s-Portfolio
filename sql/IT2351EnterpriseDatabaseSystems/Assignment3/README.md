@@ -5,3 +5,4 @@
 # Part 5 is applying an if grouping to remove nulls from certain parts of part 4.
 # Part 6 is a new query. Involves doing a group by and a sum with a bit more math.
 # Part 7 is an adjustment of part 6. Involves joining a table to add a field.
+# Part 8 is an adjustment to part 7. Adds a having line based on the calculated value for total sales.
