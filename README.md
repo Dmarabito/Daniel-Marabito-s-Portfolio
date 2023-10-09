@@ -2,7 +2,7 @@
 # This is my portfolio. If I have done my job well in writing this you will find a README file in the subdirectories. They will give more detail about the contents.
 
 # The current options to view include
-# C#
+# C# / Intro to logic
 # Java
 # Processing
 # Python
