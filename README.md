@@ -3,7 +3,7 @@
 
 # The current options to view include
 # C# / Intro to logic
-# Java
+# Java / Java IT 2650
 # Processing
 # Python
 # Java
