@@ -4,3 +4,4 @@
 # The reason it is first is due to it not containing a foreign key. This means I don't have to add a foreign key after the fact.
 # Then I did the game table which uses ratings as a foreign key. Filled it and displayed in same file.
 # I then added the author's table it was pretty straight forward no foreign keys or anything.
+# I then made creative_engagement table which is an associative entity table for game and author allowing multiple authors to work on a game and for multiple games to be made by an author.
