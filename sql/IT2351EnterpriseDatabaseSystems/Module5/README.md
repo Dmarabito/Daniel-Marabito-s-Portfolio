@@ -4,3 +4,4 @@
 # part 3 is altering a table to add a column.
 # part 4 is about creating an index.
 # part 5 is truncating a table to remove columns.
+# part 6 dropping a table like a sick beat.
