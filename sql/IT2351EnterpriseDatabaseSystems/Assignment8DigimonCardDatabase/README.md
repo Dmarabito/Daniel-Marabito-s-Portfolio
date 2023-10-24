@@ -1,3 +1,4 @@
 # So we were assigned to make our own database with connect tables.
 # the first part is just creating the database. Simple single line in CreateDigimonCardGameDatabase.sql
 # The second part I made a color table, that is located in ColorTableCreateAndInsert.sql, I also inserted colors into the table.
+# the third part is an artist table. I found out while filling some of the data that some cards don't have the artist written on them. As such I have to let another table be null at a point.
