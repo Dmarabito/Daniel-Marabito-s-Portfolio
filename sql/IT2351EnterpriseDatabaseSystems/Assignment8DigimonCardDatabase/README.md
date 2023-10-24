@@ -5,3 +5,4 @@
 # the fourth part was trait table, again I tackled the null problem this time came up with a diffrent solution that being having a trait just be null rather then a foreign key being null.
 # After that the 5th part was making the effects table, the real issue I battled was the length of effects/number per card to ensure all are visible in the screenshot for my teacher.
 # 6th was cost table create and fill.
+# 7th part is type table, it houses the types of cards.
