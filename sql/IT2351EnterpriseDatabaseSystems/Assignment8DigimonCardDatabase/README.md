@@ -6,3 +6,4 @@
 # After that the 5th part was making the effects table, the real issue I battled was the length of effects/number per card to ensure all are visible in the screenshot for my teacher.
 # 6th was cost table create and fill.
 # 7th part is type table, it houses the types of cards.
+# the 8th part is the card table, it has a foreign key refrencing type.
