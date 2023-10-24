@@ -7,3 +7,5 @@
 # 6th was cost table create and fill.
 # 7th part is type table, it houses the types of cards.
 # the 8th part is the card table, it has a foreign key refrencing type.
+# the 9th part was making card traits table is an associated entitiy table between card and traits.
+# The 10th table credits tale this is the one I thought I would have to make null, ended up inserting an unknown value in artist instead.
