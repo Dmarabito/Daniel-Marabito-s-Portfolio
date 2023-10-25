@@ -12,3 +12,4 @@
 # the 11th table is colorOfCards an associated table between colors and cards.
 # 12th step made an associated table between effects and cards.
 # 13th step requirements table is made and filled.
+# 14th step made the associated table between requirements and costs
