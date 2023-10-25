@@ -13,3 +13,4 @@
 # 12th step made an associated table between effects and cards.
 # 13th step requirements table is made and filled.
 # 14th step made the associated table between requirements and costs
+# 15th step making the associated table between cards and costs.
