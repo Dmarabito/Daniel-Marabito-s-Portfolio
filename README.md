@@ -6,5 +6,5 @@
 # Java / Java IT 2650
 # Processing
 # Python
-#Cobol
+# Cobol
 # SQL
