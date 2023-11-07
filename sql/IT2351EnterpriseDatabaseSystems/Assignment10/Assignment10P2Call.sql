@@ -1,0 +1,1 @@
+call NewCategory(5,"Triangle");
