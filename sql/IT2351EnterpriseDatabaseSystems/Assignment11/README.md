@@ -4,3 +4,4 @@
 # For part 2, I set up a trigger when the courses table is updated it inserts 2 rows into the audit table.
 # for part 3, I do an update to trigger my trigger, and show the result in the audit table.
 # for part 4, I check if event schedular is on in the global variables
+# for part 5, I set an event to trigger every day at 9 pm. This event clears the audit table.
