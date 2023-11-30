@@ -1,0 +1,35 @@
+.root {
+     -fx-background-color: olivedrab;
+    -fx-background-color: linear-gradient(to right,olive,purple);
+}
+
+.Obliterate
+{
+    -fx-text-fill:crimson;
+    -fx-background-color:black;
+}
+
+.list-view
+{
+    -fx-background-color :red;
+}
+
+.list-cell
+{
+    -fx-background-color:indigo;
+    -fx-text-fill:tan;
+}
+.list-cell:selected
+{
+    -fx-background-color:black;
+}
+
+.label
+{
+    -fx-text-fill:whitesmoke;
+}
+
+.Save
+{
+    -fx-background-color:linear-gradient(to top,red,yellow);
+}

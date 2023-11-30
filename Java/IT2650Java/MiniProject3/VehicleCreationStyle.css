@@ -1,0 +1,13 @@
+.root
+{
+    -fx-background-color:bisque;
+}
+.text-field
+{
+    -fx-background-color:lightgrey;
+}
+
+.label
+{
+    -fx-text-fill:blue;
+}
