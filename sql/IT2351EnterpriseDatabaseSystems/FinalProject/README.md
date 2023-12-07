@@ -2,3 +2,4 @@
 # The first step was creating a database
 # I then made a script to create all the tables, and fill them. This includes associative entites. It will also drop the tables if they exist. Figured that would be easier.
 # I then made a view that summarizes details about what spawns to farm for what items.
+# I then made a procedure to add spawns. It has some exception handling.
