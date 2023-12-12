@@ -4,11 +4,14 @@ import os
 import discord
 import json
 import requests
+import pyttsx3
 from Recombiner import Recombiner
 
 DiscordIntents = discord.Intents.default()
 DiscordIntents.message_content = True
-
+TTS = pyttsx3.init()
+global AudioOn
+AudioOn = True
 MachinedramonClient = discord.Client(intents=DiscordIntents)
 
 MachinedramonMemory = []
@@ -79,7 +82,24 @@ async def on_ready():
     print(f'We have logged in as {MachinedramonClient.user}')
     MachinedramonMemoryIntialization()
     #AddToMemory("Macninedramon, I think are signal is being jammed.", "user")
-    print(ChatSendToOpenAi(MachinedramonMemory))
+    #print(DiscordIntents.reactions)
+    #print(ChatSendToOpenAi(MachinedramonMemory))
+
+@MachinedramonClient.event
+async def on_raw_reaction_add(reaction):
+    print("React Detected")
+    print(reaction.emoji.name)
+    if (reaction.channel_id == ChannelId):
+        if reaction.emoji.name == "🔇":
+            File = open ("AudioSetting.txt","w")
+            File.write("False")
+            File.close()
+            print("Muting")
+        if reaction.emoji.name == "🔉":
+            File = open("AudioSetting.txt", "w")
+            File.write("True")
+            File.close()
+            print("Sounding")
 
 
 @MachinedramonClient.event
@@ -108,6 +128,12 @@ async def on_message(NewMessage):
             await LongResponseHandler(Response, NewMessage)
         else:
             await NewMessage.channel.send(Response)
+        print(AudioOn)
+        file = open("AudioSetting.txt","r")
+
+        if (file.read() == "True"):
+            TTS.say(Response)
+            TTS.runAndWait()
 
 async def LongResponseHandler(Response, NewMessage):
     Rec = Recombiner(Response)
@@ -149,5 +175,6 @@ def LongResponseHandler(Response):
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     SetupApiKeys()
+
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
