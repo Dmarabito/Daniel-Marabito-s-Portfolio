@@ -59,11 +59,17 @@ def AddToMemory(Message,Role):
     MachinedramonMemory.append({"role": Role, "content": Message})
 
 async def SetMemoryToMessages():
+    ReclassifiedAsUser = False
     MachinedramonMemory.clear()
     MachinedramonMemoryIntialization()
     async for Message in MachinedramonClient.get_channel(ChannelId).history(oldest_first=True):
         if (Message.author == MachinedramonClient.user):
-            AddToMemory(Message.content,"assistant")
+            for react in Message.reactions:
+                if (react.emoji == "🫵"):
+                    ReclassifiedAsUser = True
+                    AddToMemory(Message.content, "user")
+            if (ReclassifiedAsUser == False):
+                AddToMemory(Message.content,"assistant")
         else:
             AddToMemory(Message.content,"user")
         # Reminder you have to now uncomment the above and make it put messages in memory
@@ -89,7 +95,8 @@ async def on_message(NewMessage):
                    print("Is Image")
                elif("audio" in Attachment.content_type):
                    print("Is Audio")
-                   await AudioToText(Attachment)
+                   TranscribedMessage = await NewMessage.channel.send(await AudioToText(Attachment))
+                   await TranscribedMessage.add_reaction("🫵")
                    #Returns text, need to do something with it.
                else:
                     print(Attachment.content_type)
