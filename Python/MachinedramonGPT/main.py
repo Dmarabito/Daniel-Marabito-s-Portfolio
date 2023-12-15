@@ -77,6 +77,10 @@ async def SetMemoryToMessages():
             AddToMemory(Message.content,"user")
         # Reminder you have to now uncomment the above and make it put messages in memory
 
+async def AddReactionOptions(Message):
+    await Message.add_reaction("🔇")
+    await Message.add_reaction("🔉")
+
 @MachinedramonClient.event
 async def on_ready():
     print(f'We have logged in as {MachinedramonClient.user}')
@@ -90,16 +94,17 @@ async def on_raw_reaction_add(reaction):
     print("React Detected")
     print(reaction.emoji.name)
     if (reaction.channel_id == ChannelId):
-        if reaction.emoji.name == "🔇":
-            File = open ("AudioSetting.txt","w")
-            File.write("False")
-            File.close()
-            print("Muting")
-        if reaction.emoji.name == "🔉":
-            File = open("AudioSetting.txt", "w")
-            File.write("True")
-            File.close()
-            print("Sounding")
+        if reaction.user_id != MachinedramonClient.user.id:
+            if reaction.emoji.name == "🔇":
+                File = open ("AudioSetting.txt","w")
+                File.write("False")
+                File.close()
+                print("Muting")
+            if reaction.emoji.name == "🔉":
+                File = open("AudioSetting.txt", "w")
+                File.write("True")
+                File.close()
+                print("Sounding")
 
 
 @MachinedramonClient.event
@@ -127,7 +132,8 @@ async def on_message(NewMessage):
             print("Long Response")
             await LongResponseHandler(Response, NewMessage)
         else:
-            await NewMessage.channel.send(Response)
+            ShortResponse = await NewMessage.channel.send(Response)
+            await AddReactionOptions(ShortResponse)
         print(AudioOn)
         file = open("AudioSetting.txt","r")
 
@@ -138,7 +144,8 @@ async def on_message(NewMessage):
 async def LongResponseHandler(Response, NewMessage):
     Rec = Recombiner(Response)
     for ResponseSegment in Rec.splitArray:
-        await NewMessage.channel.send(ResponseSegment)
+        LongMParts = await NewMessage.channel.send(ResponseSegment)
+        await AddReactionOptions(LongMParts)
 
 async def AudioToText(AudioAttachment):
     print("Getting Audio")
