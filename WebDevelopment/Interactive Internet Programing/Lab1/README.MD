@@ -1,4 +1,4 @@
-# This lab was meant to get us started with javascript.
+# This lab was meant to get us started with javascript. I did it in the index.html file.
 
 # I copied and pasted the specific requirements below.
 # 1 Add a <script> element to the body where you'll place JavaScript code for Lab 1.
