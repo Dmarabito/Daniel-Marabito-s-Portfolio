@@ -1,6 +1,7 @@
 # So this is lab 2. It was pretty basic, our primer on functions, infinite arguments, arrow functions, events and some async functions.
 
 # Here is the Copy > Paste of the instructions.
+<p>
 Instructions:
 
 In our Replit Team, start the Lab2 project. In the Replit project, there is a file called index.html. I have included the instructions in an md file and as comments in the index.html file - Note: they are the same instructions as the instructions provided below.
@@ -19,3 +20,4 @@ Important Notes:
 There is a function added where you should put the function calls for steps 7 & 11. document.addEventListener("DOMContentLoaded", function()
 Make sure to create all of the functions to exact specifications asked for.
 Make sure to call the functions for steps 8, 9, and 10 at the bottom of the body element in the script element provided.
+</p>
