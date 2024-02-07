@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<!-- Lab 2
+     Name: 
+-->
+
+<head>
+<meta name="viewport" content="width=device-width">
+<title>IT-2320 - Lab 2</title>
+<script>
+// 1. Add a function called add(a, b). Return the sum of a and b.
+  function add(a,b) {return a+b;}
+// 2. Add a function called subtract(a, b). Return a-b.
+  function subtract(a,b) {return a-b;}
+  
+// 3. Add a function called sum() with no parameters. Use the arguments and return a sum of all of the values passed to the function regardless of the number of arguments.
+
+  function sum()
+  {
+    let Total = 0;
+    for (let i = 0; i < arguments.length; i++)
+    {
+    Total += arguments[i];
+    }
+    return Total;
+  }
+  
+// 4. Add a function called setTitle() that outputs the "Hello, this is Lab 2!" to the h1 element with id="title".
+  function setTitle() {document.getElementById("title").innerHTML = "Hello, this is Lab 2!"}
+  
+// 5. Add a function called studentName(name) that outputs your full name to the div element with id="student".
+  function studentName(name) {document.getElementById("student").innerHTML = name}
+  
+// 6. Add a variable to the page called secondsSinceLoad and give it a starting value of 0. Add an arrow function (no curly brackets, no parenthesis, no function keyword) called updateSeconds(). In the function, add 1 to the value of secondsSinceLoad. Display the current value of secondsSinceLoad in the HTML div provided with id="seconds". The display must happen from in the function.
+  let secondsSinceLoad = 0;
+  const updateSeconds = a => document.getElementById("seconds").innerHTML = secondsSinceLoad ++;
+  
+// 7. Call setTitle() when the page loads. I have provided a page load event below. Put all of the functions that should be called when the page loads into that single function.
+  // setTitle placed
+
+// 8. Call and output the results from add(10, 15); using document.writeln() at the end of the body element.
+
+// 9. Call and output the results from subtract(45, 10); using document.writeln() at the end of the body element.
+  
+// 10. Call and output the results from sum(5, 10, 20, 30); using document.writeln() at the end of the body element.
+  
+// 11. When the page loads, use setInterval() to call updateSeconds() every 1 second.
+
+// This is a function that is called when the body has finished loading. Put all code that needs to be called on page load into this single function.
+document.addEventListener("DOMContentLoaded", function() {
+  // put your function calls here
+  setTitle()
+  setInterval(updateSeconds, 1000);
+  
+});
+</script>
+</head>
+
+<body>
+  <h1 id="title">Title</h1>
+  <div id="student">Student Name</div>
+  Seconds since page loaded: <div id="seconds"></div>
+
+  <script>
+    // Add calls for questions 8-9 here
+    studentName("Daniel Marabito")
+    document.writeln(add(10, 15));
+    document.writeln(subtract(45,10));
+    document.writeln(sum(5, 10, 20, 30));
+  </script>
+</body>
+
+</html>
