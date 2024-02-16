@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>IT-2320 - Lab 3</title>
+  <link rel="stylesheet" type="text/css" href="./styles.css">
+</head>
+
+<body>
+  <h2 style="line-height: 1; margin-bottom: 0px">Lab 3 - Strings, Dates, and Numbers</h2>
+  <h3>Student Name: </h3>
+  <!-- In this lab, you can output your responses using document.writeln() statements after each of the problems. -->
+  <p>
+    <b>1. Create a variable with the value 'JavaScript is awesome!'. Output the length of the string using the length property. Note: this is done for you, so you can see how I would like you to answer the remaining questions. Leave the question, output the values using a document.writeln() statement, etc.</b><br>
+    <script>
+    var jsawesome = 'JavaScript is awesome!';
+    document.writeln('length = ' + jsawesome.length);
+    </script>
+  </p>
+  <p>
+    <b>2. Create a variable called phone and assign the value 888-123-1234. Using the substring() function, output the area code (the 1st 3 characters).</b><br>
+    <script>
+    let phone = "888-123-1234";
+      document.writeln(phone.substring(0,3));
+    </script>
+  </p>
+  <p>
+    <b>3. Use the substr() function to return the phone number without the area code for the variable phone used in problem 2. For example, output 123-1234.</b><br>
+    <script>
+    document.writeln(phone.substr(4));
+    </script>
+  </p>
+  <p>
+    <b>4. Create a variable called sentence with the text 'I love flavor ice cream!' Using the replace() function, replace the text 'flavor' with your favorite flavor.</b><br>
+    <script>
+    let sentence = 'I love flavor ice cream!'
+      document.writeln(sentence.replace('flavor', 'Rocky Road By Weird Al. Oh and '));
+    </script>
+  </p>
+  <p>
+    <b>5. Create variables called addr='123 Main St', city='Cleveland', state='Oh', and zip code=44115. Output the address in all uppercase letters as it would appear on the front of an envelope (newlines, commas, etc). Use the appropriate function to convert the strings to uppercase letters.</b><br>
+    <script>
+      let addr = '123 Main St', city = 'Cleveland', state = 'Oh', zipCode = 44115;
+      document.writeln((addr +"<br>"+city +", "+ state +" "+zipCode).toUpperCase());
+    </script>
+  </p>
+  <p>
+    <b>6. Create a variable called helpdesk and assign a value of 'HelpDesk@Tri-C.edu'. Use a string function to convert it to all lowercase letters and output the value.</b><br>
+    <script>
+      let helpdesk = 'HelpDesk@Tri-C.edu';
+      document.writeln(helpdesk.toLowerCase());
+    </script>
+  </p>
+  <p>
+    <b>7. Create a variable called id with a value of '007'. Use padStart() to output the value '000000007' with 9 characters total.</b><br>
+    <script>
+      let id = '007';
+      document.writeln(id.padStart(9,"0"));
+    </script>
+  </p>
+  <p>
+    <b>8. Create variables for firstName and lastName. Assign your name to the variables. Use template literals to output 'Hello firstName lastName!'. Template literals can be found in the "JS String Templates" tutorial.</b><br>
+    <script>
+      let firstName = 'Daniel';
+      lastName = 'Marabito';
+      document.writeln(`Hello ${firstName} ${lastName}!`);
+    </script>
+  </p>
+  <p>
+    <b>9. Create a variable called joke with the following string: 'Why don't programmers like nature? It has too many bugs.' Define the value on multiple lines using back-tics syntax.</b><br>
+    <script>
+      let joke = `Why don't programmers like nature?
+      It has too many bugs.`;
+      document.write (joke);
+    </script>
+  </p>
+  <p>
+    <b>10. Write an expression that returns true from a call to isNaN(). Display the output returned from isNaN().</b><br>
+    <script>
+      document.writeln(isNaN("a"));
+    </script>
+  </p>
+  <p>
+    <b>11. Use toFixed to output the results of 20 + 10 / 3 formatted like currency (2 decimal places) with dollars and cents.</b><br>
+    <script>
+      document.writeln('$'+(20 + 10 / 3).toFixed(2));
+    </script>
+  </p>
+  <p>
+    <b>12. Use parseInt() to output the whole number value for 10.335.</b><br>
+    <script>
+      document.writeln(parseInt(10.335));
+    </script>
+  </p>
+  <p>
+    <b>13. Use an appropriate function call to check to see if 20.5 is an integer.</b><br>
+    <script>
+      document.writeln(Number.isInteger(20.5));
+    </script>
+  </p>
+  <p>
+    <b>14. Explain why the following call returns a value of undefined.</b><br>
+    <script>
+    let x = 6;
+    document.writeln('MAX_LENGTH of x = ' + x.MAX_LENGTH);
+    document.writeln(`<br> MAX_VALUE is a property of the Number object, they can only be accessed by using Number.MAX_VALUE. They can't be accessed through x.MAX_VALUE`);
+    </script>
+  </p>
+  <p>
+    <b>15. Create a Date object called d and assign the current date and time using new Date(). output the value of d.</b><br>
+    <script>
+      let d = new Date()
+      document.writeln(d);
+    </script>
+  </p>
+  <p>
+    <b>16. Subtract 1 year from d and output the value.</b><br>
+    <script>
+      d.setFullYear(d.getFullYear()-1);
+      document.writeln(d);
+    </script>
+  </p>
+  <p>
+    <b>17. Output the toUTCString() value of d.</b><br>
+    <script>
+       document.writeln(d.toUTCString());
+    </script>
+  </p>
+  <p>
+    <b>18. Output only the year from d.</b><br>
+    <script>
+      document.writeln(d.getFullYear());
+    </script>
+  </p>
+  <p>
+    <b>19. Output a short date with a format similar to 08-01-2035 using d.</b><br>
+    <script>
+      document.writeln(`${(d.getMonth()+1).toString().padStart(2,"0")}`
+      +`-${(d.getDate()+1).toString().padStart(2,"0")}`
+      +`-${d.getFullYear()}`);
+    </script>
+  </p>
+  <p>
+    <b>20. Output the day of the week using d and getDay().</b><br>
+    <script>
+      document.writeln(["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+      [d.getDay()]);
+    </script>
+  </p>
+  
+  </script>
+</body>
+
+</html>
