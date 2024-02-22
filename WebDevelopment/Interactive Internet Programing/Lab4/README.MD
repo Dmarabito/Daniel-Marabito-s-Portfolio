@@ -1,0 +1,1 @@
+# So this lab was about learning arrays. we use methods like pop, push and sort. I am a little proud of my sort implementation. Since the professor didn't specify how he wanted the numbers sorted, I sorted them first by if they were odd or even then by value.
