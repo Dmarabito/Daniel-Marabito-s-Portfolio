@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+</head>
+
+<body>
+<script>
+  // 1 - Create an Array named trees with the following values: Sugar Maple, Red Maple, Red Oak, American Beech, Flowering Dogwood, Eastern Redbud
+
+  const trees = ["Sugar Maple", "Red Maple", "Red Oak",
+                 "American Beech", "Flowering Dogwood", "Eastern Redbud"];
+  
+  // 2 - Output the Array values using a for loop
+  document.writeln('<br><br>For Loop Output:<br>');
+  for (let i = 0; i < trees.length; i++)
+  {
+    document.writeln(trees[i]+"<br>");
+  }
+
+  document.writeln("<br>");
+  
+  // 3 - pop() the last value and then output the Array using document.writeln(trees);
+  trees.pop(trees.length-1);
+  document.writeln(trees);
+  document.writeln("<br><br>");
+  // 4 - push() the value 'Magnolia' onto the Array and output it using document.writeln(trees);
+  trees.push('Magnolia');
+  document.writeln(trees);
+  document.writeln("<br><br>");
+  // 5 - Output the length of the array using the length property
+   document.writeln(trees.length);
+  document.writeln("<br><br>");
+  // 6 - Sort the array and then output the all of the values
+  trees.sort();
+  document.writeln(trees);
+  document.writeln("<br><br>");
+  // 7 - Create an array called numbers with the following values: 4, 8, 2, 9, 10, 12, 3, 5
+  const numbers = [4, 8, 2, 9, 10, 12, 3, 5];
+  // 8 - Use a loop to calculate average. Output the average using document.writeln()
+  let sum = 0;
+  for(let i = 0; i <numbers.length;i++)
+  {
+    sum += numbers[i];
+  }
+  document.writeln(sum/numbers.length);
+  document.writeln("<br><br>");
+
+  // 9 - Use a loop to calculate sum. Output the final sum using document.writeln()
+   sum = 0;
+  for(let i = 0; i <numbers.length;i++)
+  {
+    sum += numbers[i];
+  }
+  document.writeln(sum);
+  document.writeln("<br><br>");
+  
+  // 10 - Sort the array and output the values in numbers
+  numbers.sort(SortMethod);
+  document.writeln(numbers);
+
+  function SortMethod(a,b)
+  {
+    if (a%2>b%2)
+    {
+      return -1;
+    }
+    else if (a%2 == b%2)
+    {
+      if(a<b)
+        {return -1;}
+    }
+    else
+    {
+      return 0;
+    }
+  }
+</script>
+</body>
+
+</html>
