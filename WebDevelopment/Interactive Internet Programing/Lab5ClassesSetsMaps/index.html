@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Lab 5</title>
+  <link type="text/css" rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+</head>
+
+<body>
+<h1 class="ml2">Lab 5 by Your Name</h1>
+  
+<b>Problem 1</b><br>
+<script>
+// answer problem 1 here
+
+  class student 
+  {
+    constructor(name,major, gpa, classesTaken)
+      {
+      this.name = name;
+          this.major = major;
+          this.gpa = gpa;
+          this.classesTaken = classesTaken;
+    }
+      displayProperties(){document.writeln(this.name,", ",this.major,", ",this.gpa,", ",this.classesTaken);}
+  }
+  const Daniel = new student("Daniel Marabito","Programming and Development",3.0,["IT-1025", "IT-2310", "IT-1050"]);
+
+  Daniel.displayProperties();
+
+  document.writeln("<br>");
+
+</script>
+
+<hr><b>Problem 2</b><br>
+<script>
+// answer problem 2 here
+  let Course = {courseId:"IT-2320", title:"IT-2320", crsDesc:"Interactive Internet Programming", creditHrs:"4",
+  displayCourse:function ()
+    {
+      //document.writeln(this.courseId,", ",this.title,", ", this.crsDesc,", ",this.creditHrs);
+          document.writeln("<br>");
+          document.writeln(Object.values(this));
+    }
+  };
+  Course.displayCourse();
+
+  document.writeln("<br><br>");
+</script>
+
+<hr><b>Problem 3</b><br>
+<script>
+// answer problem 3 here
+  let planet = {name:"Mercury", diameterMiles:3031.9};
+  planet.millMilesFromEarth = 48;
+
+  document.writeln("planet Name: "+planet.name+"<br>Diameter in miles: "
+  +planet.diameterMiles+"<br>Distance from earth in millions of miles: " 
+  + planet.millMilesFromEarth);
+
+  
+</script>
+  
+<hr><b>Problem 4</b><br>
+<script>
+// answer problem 4 here
+  let favoriteLanguages = new Set(["JavaScript", "Python", "Swift", "Dart"])
+
+  for(let language of favoriteLanguages) 
+  {
+    console.log(language);
+  }
+  // here I am going to show what I learned about iterators.
+  let langit = favoriteLanguages.values();
+  let langCurrent;
+  let end = false;
+  let start = true;
+
+  while(end == false)
+  {
+  langCurrent = langit.next();
+  end = langCurrent.done;
+  if (end == false)
+    {
+      if (start == true)
+      {start = false;}
+      else{document.writeln("<br>");}
+      document.writeln(langCurrent.value);
+    }
+  }
+
+</script>
+  
+<hr><b>Problem 5</b><br>
+<script>
+// answer problem 5 here
+  let creditHrs = new Map
+  ([['IT-1025', 3], ['IT-1050',3], 
+  ['IT-2310', 3], ['IT-2320',4],
+  ['IT-2030',4], ['IT-2351',4],
+  ['IT-2650',4]]);
+  document.writeln(creditHrs.get('IT-2030'));
+  document.writeln("<br>");
+  creditHrs.forEach(OutputValues)
+  function OutputValues(v,k)
+  {
+    document.writeln(k," gives ",v, " credits","<br>")
+  }
+
+</script>
+
+
+<!-- Uncomment to animate the title -->
+<!-- <script src="title.js"></script> -->
+</body>
+
+</html>
