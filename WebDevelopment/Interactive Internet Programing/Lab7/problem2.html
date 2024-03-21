@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <title>Lab 7 - Problem 2</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" type="text/css" href="./styles.css">
+  </head>
+  <body>
+    <h1>Lab 7 - Problem 2</h1>
+    Add an HTML input element to accept an email address. Develop a JavaScript function that takes an input string (supposedly an email address) as an argument and validates if it conforms to the standard email format. The function should check for the presence of "@" symbol, domain name, and top-level domain (TLD) according to common email address patterns. Call the function to validate a single html form element on the page that allows an email input.
+    Example: If the user inputs "example@email" without a valid TLD (e.g., ".com", ".org"), the function should return false indicating an invalid email format. <br><br>
+    <form method="POST" action="./index.php" onsubmit='return CheckEmail()'>
+      
+      <br><br>
+      <b>Email</b><br>
+      <input type='text' id='email' name='email'>
+      <input type="submit" value="Submit Email">
+    </form>
+    <script>
+    
+    function CheckEmail() {
+    let EmailPatternRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    // /^(?:[a-z]|[A-Z]|[0-9]|\+|\_|\~|\-)+\@(?:[a-z]|[A-Z]|[0-9]|\+|\_|\~|\-)+\.(?:[a-z]|[A-Z]|[0-9]|\+|\_|\~|\-)+$/
+    let EmailValue = document.getElementById('email').value;
+    if (EmailPatternRegex.test(EmailValue) == false)
+    {
+      alert('Email address Expected');
+      return false;      
+    }  
+    }
+    </script>
+  </body>
+</html>

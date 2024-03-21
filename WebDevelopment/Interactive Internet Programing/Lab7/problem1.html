@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <title>Lab 7 - Problem 1</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" type="text/css" href="./styles.css">
+  </head>
+  <body>
+    <h1>Lab 7 - Problem 1</h1>
+    Check the name input element to make sure that the field is not empty when the form is submitted. If it is empty, use JavaScript to display an error message on the page that says, "Name input is required."<br><br>
+    <form method="POST" action="./index.php" onsubmit='return NameEmptyCheck()'>
+      <b>Name</b> <br><input type="text" id="name" name="name">
+      <br><br>
+      <input type="submit" value="Submit Name">
+    </form>
+    <script>
+      function NameEmptyCheck() {
+        let NameInput = document.getElementById('name').value;
+        if (NameInput == '') {
+          window.alert('Name input is required.');
+          return false;
+        }
+      }
+    </script>
+  </body>
+</html>

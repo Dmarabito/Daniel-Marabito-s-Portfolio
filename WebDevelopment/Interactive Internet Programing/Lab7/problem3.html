@@ -1,0 +1,75 @@
+<html>
+  <head>
+    <title>Lab 7 - Problem 3</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" type="text/css" href="./styles.css">
+  </head>
+  <body>
+    <h1>Lab 7 - Problem 3</h1>
+    Create a HTML form with a password field and implement JavaScript code to ensure that the password meets certain criteria including: 1) At least 8 characters in length, 2) contains 1 of the following characters ! [ ., 3) has at least 1 uppercase 4) has at least 1 lowercase letter, and 5) contains at least 1 numeric digit. If the password does not meet the criteria, display an error message on the page that says, "Password does not meet requirement: " and display the requirement that it doesn't meet.<br><br>
+    <form method="POST" action="./index.php" onsubmit="return validatePassword();">
+
+      <br><br>
+      <b>Password</b><br>
+      <input type="password" id='password' name='password'>
+      <input type="submit" value="Submit Password" >
+    </form>
+    <script>
+      function validatePassword() {
+       if(PassLengthCheck(8) == false
+          |RequiredSpecialCharacterCheck() == false
+          |UppercaseChecker() == false
+          |LowercaseChecker() == false
+          |NumberChecker() == false
+         )
+       {return false;} 
+      }
+      function PassLengthCheck(ReqPassLength) {
+        let PassContent = document.getElementById('password').value;
+        if(PassContent.length < ReqPassLength)
+        {
+          alert('Password does not meet requirement: '+'At least 8 characters in length');
+          return false;
+        }
+      }
+      function RequiredSpecialCharacterCheck() {
+        let PassContent = document.getElementById('password').value;
+        let reqChar = /.*(?:\!|\[|\.).*/;
+        if(reqChar.test(PassContent) == false)
+        {
+          alert('Password does not meet requirement: '
+                +'contains 1 of the following characters ! [ .');
+          return false;
+        }
+        
+      }
+      function UppercaseChecker() {
+        let PassContent = document.getElementById('password').value;
+        let UpperCaseDef = /.*[A-Z].*/;
+        if(UpperCaseDef.test(PassContent) == false){
+          alert('Password does not meet requirement: '
+          +'has at least 1 uppercase');
+          return false;
+        }
+      }
+      function LowercaseChecker() {
+        let PassContent = document.getElementById('password').value;
+        let LowerCaseDef = /.*[a-z].*/;
+        if(LowerCaseDef.test(PassContent) == false){
+          alert('Password does not meet requirement: '
+          +'has at least 1 lowercase letter');
+          return false;
+        }
+      }
+      function NumberChecker(){
+        let PassContent = document.getElementById('password').value;
+        let NumberDef = /.*[0-9].*/;
+        if(NumberDef.test(PassContent) == false){
+          alert('Password does not meet requirement: '
+          +'contains at least 1 numeric digit');
+          return false;
+        }
+      }
+    </script>
+  </body>
+</html>

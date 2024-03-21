@@ -1,0 +1,68 @@
+<html>
+  <head>
+    <title>Lab 7 - Problem 4</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" type="text/css" href="./styles.css">
+  </head>
+  <body>
+    <h1>Lab 7 - Problem 4</h1>
+    <form method="POST" action="./index.php" onsubmit='return formValidityChecker()'>
+      Create an HTML form that accepts first name, last name, and select list with favorite programming languages. In the select list, the first option should be "Select a Favorite Language". Make sure that one of the languages, not this option, is selected before submitting the form. Also, make sure that first and last name are not empty.
+      <br><br>
+      <b>First Name: </b></br>
+      <input type="text" id="firstName" name="firstName">
+      <br><br>
+      <b>Last Name: </b></br>
+      <input type="text" id="lastName" name="lastName">
+      <br><br>
+      <select id='FavoriteLanguage' name="FavoriteLanguage">
+        <option value="Select a Favorite Language">Select a Favorite Language</option>
+        <option value='C#'>C#</option>
+        <option value='C++'>C++</option>
+        <option value='COBOL'>COBOL</option>
+        <option value='Java'>Javascript</option>
+        <option value='Javascript'>Javascript</option>
+        <option value='Python'>Python</option>
+        <option value='Whitespace'>Whitespace</option>
+      </select>
+      <br><br>
+      <input type="submit" value="Submit">
+    </form>
+    <script>
+      function formValidityChecker() {
+        if (fNameChecker() == false
+           |lNameChecker() == false
+           |LanguageTasteChecker() == false
+           ) {
+          return false;
+        }
+      }
+      
+      function fNameChecker() {
+        let FnameValue = document.getElementById("firstName").value;
+        if (FnameValue == "")
+        {
+          alert("First Name is required");
+          return false;
+        }
+      }
+      
+      function lNameChecker() {
+        let LnameValue = document.getElementById("lastName").value;
+        if (LnameValue == "")
+        {
+          alert("Last Name is required");
+          return false;
+        }
+      }
+      function LanguageTasteChecker() {
+        let SelectedLang = document.getElementById('FavoriteLanguage').value;
+        if (SelectedLang == "Select a Favorite Language") {
+          alert(SelectedLang);
+          return false;
+        }
+        
+      }
+    </script>
+  </body>
+</html>
