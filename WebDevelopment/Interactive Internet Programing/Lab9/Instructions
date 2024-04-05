@@ -1,0 +1,31 @@
+Use Lab 9 in Replit to complete the following. All pages - problem1.html, problem2.html, etc. - should be created in the Lab 9 replit.
+1: Change Text Color on Button Click
+HTML: Use problem1.html. Add a button and a paragraph element.
+JavaScript: Using concepts from the JavaScript DOM Events resource, write code that:
+Identifies the button element using its ID.
+Attaches a click event listener to the button.
+When the button is clicked, the event listener function should change the text color of the paragraph element to red.
+
+2: Animate a Box Movement
+HTML: Create a simple HTML page called problem2.html using problem1.html as an example. Add a colored box element positioned at the top left corner.
+JavaScript: Using concepts from the JavaScript DOM Animate webpage, write code that:
+Identifies the box element using its ID.
+Uses a loop or setInterval function to continuously change the position (top and left) of the box element by a small amount in each iteration.
+This will create the illusion of the box moving across the screen.
+3: Toggle Element Visibility
+HTML: Create an HTML page called problem3.html with a heading element (h1) and a button element.
+JavaScript: Using concepts from the JavaScript DOM manipulation webpages (like getElementById() and style.display), write code that:
+Identifies the heading element and the button element using their IDs.
+Attaches a click event listener to the button.
+When the button is clicked, the event listener function should toggle the visibility of the heading element.
+If the heading is currently visible, the function should hide it by setting its display style property to 'none'.
+If the heading is currently hidden, the function should make it visible by setting its display style property to 'block' (or another appropriate value).
+4: Add and Remove List Items
+HTML: Create an HTML page called problem4.html with an input field, a button, and an unordered list element.
+JavaScript: Using concepts from the JavaScript DOM Nodes webpage, write code that:
+1. Attaches a click event listener to the button.
+2. When the button is clicked, the event listener function should:
+3. Get the value entered in the input field.
+4. Create a new list item (li) element with the entered text as its content.
+5. Append the newly created list item element to the existing unordered list element.
+6. Provide an additional button (or modify the existing button) to remove the last list item when clicked. You can use the removeChild() method to achieve this
