@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Lab 9 - Problem 1</title>
+  <style>
+    * { font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; }
+  </style>
+</head>
+
+<body>
+  <h1>Lab 9 - Problem 1</h1>
+  <p id='Wish'>I wish to be an all powerful Genie!!!</p>
+  <button id='Genie'>Grant Wish</button>
+  
+</body>
+<script>
+let JafarButton = document.getElementById('Genie');
+JafarButton.addEventListener('click',grantWish);
+function grantWish()
+{
+  document.getElementById('Wish').style.color = 'red';
+}
+</script>
+</html>

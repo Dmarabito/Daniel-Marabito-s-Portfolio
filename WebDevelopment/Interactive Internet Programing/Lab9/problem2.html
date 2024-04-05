@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Lab 9 - Problem 2</title>
+  <style>
+    {font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}
+    #BigBox
+    {
+      width: 400px;
+      height: 400px;
+      position: relative;
+    }
+    #LittleBox
+    {
+      width: 50px;
+      height: 50px;
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+<!--
+  HTML: Create a simple HTML page called problem2.html using problem1.html as an example. Add a colored box element positioned at the top left corner.
+  JavaScript: Using concepts from the JavaScript DOM Animate webpage, write code that:
+  Identifies the box element using its ID.
+  Uses a loop or setInterval function to continuously change the position (top and left) of the box element by a small amount in each iteration.
+  This will create the illusion of the box moving across the screen.
+  -->
+  <h1>Lab 9 - Problem 2</h1>
+  <div id='BigBox'>
+  <div id='LittleBox'></div>
+  </div>
+<script>
+// communal Variables
+  let BigBox = document.getElementById('BigBox');
+  let LittleBox = document.getElementById('LittleBox');
+</script>
+
+<script>
+  // color setting, yeah I could do this with just css but this is more fun.
+  //let BigBox = document.getElementById('BigBox');
+  BigBox.style.background = 'grey';
+  //let LittleBox = document.getElementById('LittleBox');
+  let ColorShifter = setInterval(ShiftColor, 2000);
+  let ColorIndex = 0;
+  let ColorArray = ['blue','red','green'];
+  LittleBox.style.background = ColorArray[0];
+  function ShiftColor()
+  {
+    ColorIndex ++;
+    LittleBox.style.background = ColorArray[ColorIndex%ColorArray.length];
+  }
+</script>
+
+<script>
+// Slide Script
+let Slider = setInterval(Slide, 10);
+let MainSlidePhase = true;
+let SlideAmount = 0;
+function Slide ()
+{
+if (SlideAmount < 0 || SlideAmount > 350)
+{
+  //console.log(MainSlidePhase);
+  MainSlidePhase = !(MainSlidePhase);
+}
+
+if (MainSlidePhase == true)
+  {
+    SlideAmount ++;
+    LittleBox.style.top = SlideAmount + 'px';
+    LittleBox.style.left = SlideAmount + 'px';
+  }
+else if (MainSlidePhase == false)
+  {
+    SlideAmount --;
+    LittleBox.style.top = SlideAmount + 'px';
+    LittleBox.style.left = SlideAmount + 'px';
+  }
+}
+</script>
+</body>
+
+</html>

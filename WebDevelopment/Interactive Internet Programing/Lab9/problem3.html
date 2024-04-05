@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Lab 9 - Problem 3</title>
+  <style>
+    * { font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; }
+  </style>
+</head>
+<body>
+  <h1 id='Ninja'>Lab 9 - Problem 3</h1>
+  <!--
+  HTML: Create an HTML page called problem3.html with a heading element (h1) and a button element.
+  JavaScript: Using concepts from the JavaScript DOM manipulation webpages (like getElementById() and style.display), write code that:
+  Identifies the heading element and the button element using their IDs.
+  Attaches a click event listener to the button.
+  When the button is clicked, the event listener function should toggle the visibility of the heading element.
+  If the heading is currently visible, the function should hide it by setting its display style property to 'none'.
+  If the heading is currently hidden, the function should make it visible by setting its display style property to 'block' (or another appropriate value). 
+  -->
+  <button id='SmokeBomb'>Vanish</button>
+  <script>
+    let Ninja = document.getElementById('Ninja');
+    let SmokeBomb = document.getElementById('SmokeBomb');
+    SmokeBomb.addEventListener('click', poof);
+    
+    function poof ()
+    {
+      if (Ninja.style.display != 'none')
+      {
+        Ninja.style.display = 'none';
+      }
+      else
+      {
+        Ninja.style.display = 'block';
+      }
+    }
+  </script>
+</body>
+
+</html>

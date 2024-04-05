@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Lab 9 - Problem 4</title>
+  <style>
+    * { font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; }
+  </style>
+</head>
+<body>
+  <h1>Lab 9 - Problem 4</h1>
+  <input id='itemInputter' type="text">
+  <button id='itemAppender'>Add item to list</button>
+  <ul id='Listy'></ul>
+  <script>
+  let itemAppender = document.getElementById('itemAppender');
+  let itemInputter = document.getElementById('itemInputter');
+  let Listy = document.getElementById('Listy');
+  let BTNCount = 0;
+  /*
+  let RemovalButton = document.createElement('button');
+  RemovalButton.innerHTML = "Remove last item";
+  document.body.appendChild(RemovalButton);
+  RemovalButton.addEventListener('click',KillKid);
+  */
+    //document.body.insertBefore(Listy,RemovalButton);
+  itemAppender.addEventListener('click',AppendTheItem);
+  function AppendTheItem ()
+  {
+    let NewListItem = document.createElement('li');
+    let DehText = document.createTextNode(itemInputter.value);
+    NewListItem.appendChild(DehText);
+    Listy.appendChild(NewListItem);
+
+    BTNCount += 1;
+    let RemovalButton = document.createElement('button');
+    RemovalButton.innerHTML = "Remove last item - Button Number "+BTNCount;
+    document.body.appendChild(RemovalButton);
+    RemovalButton.addEventListener('click',KillKid);
+    //itemInputter.value
+    //console.log(itemInputter.value);
+    //window.alert(itemInputter.value);
+  }
+  function KillKid()
+  {
+    if(Listy.childNodes.length>0)
+    {Listy.removeChild(Listy.lastChild);}
+  }
+  </script>
+</body>
+
+</html>
