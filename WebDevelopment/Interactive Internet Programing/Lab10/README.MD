@@ -1,0 +1,1 @@
+# So with this one we learn abit about asyncronous functions. We also use Ajax(Asynchronous JavaScript And XML) and fetch. It was quite fun. I am going upload the instructions as an instructions file. Note I do know that there was 2 problems labeled number 1, that is on the teacher not me. what can I say they are both number 1.
