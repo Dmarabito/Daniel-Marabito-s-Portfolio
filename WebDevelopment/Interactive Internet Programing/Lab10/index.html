@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Lab 10</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <h1>IT-2320 - Lab 10</h1>
+    <p>
+      AJAX Response:<br>
+      <div id="ajax"></div>
+    <script>
+      /* 1. Use AJAX to retrieve a response from ajax.txt. Populate div with id="ajax" with the response from the ajax call.*/
+      let AjReq = new XMLHttpRequest();
+      AjReq.onload = function () {
+        if(AjReq.status == 200 && AjReq.readyState == 4)
+        {
+          document.getElementById('ajax').innerHTML = AjReq.responseText;
+        }
+      };
+      AjReq.open('get','ajax.txt');
+      AjReq.send();
+    </script>
+    </p>
+    <p>
+      Fetch Response:<br>
+      <div id="fetch"></div>
+    </p>
+  <script>
+    /*1. Use Fetch API to retrieve a response from fetch.txt. Populate div with id="fetch" with the response from the fetch api call.*/
+    Fetcher('fetch.txt');
+    //document.getElementById('fetch').innerHTML = Ftext;
+    async function Fetcher(FileToFetch)
+    {
+      
+      let PromiseOfFile = await fetch(FileToFetch);
+      let FileText = await PromiseOfFile.text();
+      document.getElementById('fetch').innerHTML = FileText;
+    }
+  </script>
+  </body>
+</html>
