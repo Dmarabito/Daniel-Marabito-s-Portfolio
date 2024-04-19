@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>replit</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<h1>Lab 8 - JSON by [Fill in your name]</h1>
+<p>
+  <b>Step 1</b>
+  <blockquote>Given the following: '{"id":"IT-2320", "credits":4, "title":"Interactive Internet Programming"}'<br><br>
+  Parse it to a JSON object called courseObj using JSON.parse().<br><br>Then, use the JavaScript object called courseObj to output the title using document.writeln().<br><br>
+  <script>
+  // Solution 1
+    let courseObj = JSON.parse('{"id":"IT-2320", "credits":4, "title":"Interactive Internet Programming"}');
+    document.writeln(courseObj.title);
+  </script>
+  </blockquote>
+</p>
+<p>
+  <b>Step 2</b>
+  <blockquote> Given:
+  const text = '[ "Document Object Model", "Language Constructs", "OOP", "Fetch API", "JSON" ]';<br><br>
+  First, use JSON.parse() to parse it to a JavaScript array.<br><br>Then, create a loop to output each of the values in array using document.writeln() separated by a newline <br>.<br>
+  <script>
+  // Solution 2
+    const text = '[ "Document Object Model", "Language Constructs", "OOP", "Fetch API", "JSON" ]';
+    let ContentArray = JSON.parse(text);
+    ContentArray.forEach(function (v,i,Dis){document.writeln(v+'<br>');});
+  </script>
+  </blockquote>
+</p>
+<p>
+  <b>Step 3</b>
+  <blockquote>Given:
+  const myJSON = '{"id":"IT-2320", "credits":4, "title":"Interactive Internet Programming", "description":"JavaScript"}';<br><br>Use JSON.parse() to parse it to an object.<br><br>Use dot (.) notation to movidy the value of description to "An Introduction to JavaScript".<br><br>Use dot (.) notation to output all of the values using a single document.writeln() statement.<br><br>
+  <script>
+  // Solution 3
+    // I am assuming movidy is suppose to be modify.
+    const myJSON = '{"id":"IT-2320", "credits":4, "title":"Interactive Internet Programming", "description":"JavaScript"}';
+    let Class = JSON.parse(myJSON);
+    Class.description = "An Introduction to JavaScript";
+    document.writeln(Class.id+' '+Class.credits+' '+Class.title+' '+Class.description);
+  </script>
+  </blockquote>
+</p>
+<p>
+  <b>Step 4</b>
+  <blockquote>Create an array (called courseArray) and JSON string (called courseJSON) with the following values: IT-1025, IT-2310, IT-2320.<br><br>Use any technique to output all of the values in both the array and JSON string.<br><br>In a comment, explain the technique used.<br><br>
+  <script>
+  // Solution 4
+    let courseJSON = '["IT-1025", "IT-2310", "IT-2320"]';
+    let courseArray = JSON.parse(courseJSON);
+    document.writeln('From Array<br>');
+    courseArray.forEach(function (v,i,dis){document.writeln(v+'<br>');});
+    /*
+    So I started with making the JSON string, which I parsed into an array. I then used a forEach as I want to get better at using forEach. The forEach calls the function given as an argument, it calls it with the arguments of its value, it's index, and the array. I went with v,i and dis as my arguments. dis being a clever alternative for the word this. Really I only needed to provide v but I included the others to get practice with them.
+    */
+    document.writeln('<br><br>from string<br>');
+    BeFree(courseJSON);
+    function BeFree(InString)
+    {
+      InString = InString.substring(1,InString.length-1);
+      Arrifyed = InString.split(',');
+      let MidText = ''
+      Arrifyed.forEach(function(v,i,dis){
+        v = v.trim();
+        v = v.substring(1,v.length-1);
+        MidText = MidText + v +'<br>';
+      });
+      document.writeln(MidText);
+    }
+    /*
+    So for producing it from the string I decided to rely on string based functions. So I started by removing the [] on either end by using substring to grab between the first and last characters. I then got an array by splitting the string based on a comma. I did a forEach on that array. I then went about removing the "" from each one but I noticed there was some white space so I performed a trim on each item and then removed the 1st and last character of each element. I then concattenated each element with a <br> between them on a string var called MidText. I then output MidText using document.writeln. 
+    */
+  </script>
+  </blockquote>
+</p>
+<p>
+  <b>Step 5</b>
+  <blockquote>Using the "Array as JSON" example on https://www.w3schools.com/js/js_json_server.asp, read the values from courses.txt.<br><br>Output all of the values in the array.<br><br>
+<div id=Answer5></div>
+  <script>
+  // Solution 5
+  const request1 = new XMLHttpRequest();
+  let ResponseArrayText = "";
+  request1.onload = function(){
+    let ResponseArray = JSON.parse(request1.responseText);
+    ResponseArray.forEach(function (v,i,dis){
+      ResponseArrayText = ResponseArrayText + v +"<br>";
+    });
+  document.getElementById('Answer5').innerHTML = ResponseArrayText;
+  };
+  request1.open('GET',"courses.txt");
+  request1.send();
+  </script>
+  </blockquote>
+</p>
+<p>
+  <b>Step 6</b>
+  <blockquote>Using the "JSON From a Server" example on https://www.w3schools.com/js/js_json_server.asp, request JSON from the file it1025.txt.<br><br>Output the value of title using a document.writeln().<br><br>
+  <script>
+  // Solution 6
+    const request2 = new XMLHttpRequest();
+    request2.onload = function () {
+      let Response2Obj = JSON.parse(this.responseText);
+      //So document.writeln when used after the page is loaded will wipe the page. So I had it add the page back in when writing it. This seems to have create a large space between the answer and the question. Oh well.
+      document.writeln(document.body.innerHTML+Response2Obj.title);
+    };
+    request2.open('GET',"it1025.txt");
+    request2.send();
+  </script>
+  </blockquote>
+</p>
+  <br><br><br><br><br><br>
+</body>
+
+</html>
