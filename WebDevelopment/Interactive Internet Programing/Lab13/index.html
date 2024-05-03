@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.datatables.net/2.0.5/css/dataTables.dataTables.min.css">
+  <script src="https://cdn.datatables.net/2.0.5/js/dataTables.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.css" rel="stylesheet"/>
+  <title>Lab 13</title>
+</head>
+
+<body>
+  <h1>Lab 13</h1>
+  <label>Framework</label><br>
+  <input id="FrameworkIn"><br>
+  <label>Link</label><br>
+  <input id="LinkIn"><br>
+  <label>Description</label><br>
+  <input id="DescriptionIn">
+  <button id="addFrameworkButton">Add framework / api</button><br><br>
+  <table id="ApiFrameworkTable"  class="display" style="width:100%">
+    <thead>
+      <tr>
+        <th>JavaScript Framework/API</th>
+        <th>Link</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>React</td>
+        <td><a href="https://react.dev/learn">https://react.dev/learn</a></td>
+        <td>A tool for making user interfaces using components.</td>
+      </tr>
+      <tr>
+        <td>Angular</td>
+        <td><a href="https://angular.io/start">https://angular.io/start</a></td>
+        <td>A framework for making web appliactions.</td>
+      </tr>
+      <tr>
+        <td>jQuery</td>
+        <td><a href="https://jquery.com/download/">https://jquery.com/download/</a></td>
+        <td>A framework the simplifies various tasks such as DOM Manipulation.</td>
+      </tr>
+    </tbody>
+  </table>
+
+<script>
+  let FrameworkTable = new DataTable('#ApiFrameworkTable');
+let FrameworkAddButton = document.getElementById("addFrameworkButton");
+  FrameworkAddButton.addEventListener("click",function(){
+    //alert("Me clicked");
+    let NewFrameworkContent = document.getElementById("FrameworkIn").value;
+    let NewLinkContent = document.getElementById("LinkIn").value;
+    let NewDescriptionContent = document.getElementById("DescriptionIn").value;
+    FrameworkTable.row.add([NewFrameworkContent,NewLinkContent,NewDescriptionContent]).draw();
+    toastr.info("Row: "+NewFrameworkContent+" "+NewLinkContent+" "+NewDescriptionContent+" added");
+  })
+  
+</script>
+</body>
+
+</html>
