@@ -1,0 +1,1 @@
+# So this lab is about learning some new frameworks. Specifically it uses datatables and toastr. So yeah I used that to make a table of frameworks that you can add stuff to. When ever something is added toastr creates a message reporting that it was added.
