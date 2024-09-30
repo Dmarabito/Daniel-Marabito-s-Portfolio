@@ -1,0 +1,1 @@
+# So for this lab we were learning about making functions in php and using prexisting functions. So I made a function that takes a string with the format "LastName, firstName" and an optional age. It then reverses the lastName and first name and includes age if provide or says age unknown.
