@@ -1,1 +1,2 @@
 # So for this one we learn about files. The real meat was uploading files and placing limitations on what we accept. Then we more or less read the file, display its connents with line numbers, and write it in caps as an output file.
+# I used the naming convention that the teacher recommended. of naming *_a the file that we are submitting to. so lab7_a is where most of my code is, while lab7 is more or less what the teacher provided. It is just the form for picking and submitting the file.
