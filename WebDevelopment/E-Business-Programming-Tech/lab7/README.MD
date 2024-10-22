@@ -1,0 +1,1 @@
+# So for this one we learn about files. The real meat was uploading files and placing limitations on what we accept. Then we more or less read the file, display its connents with line numbers, and write it in caps as an output file.
