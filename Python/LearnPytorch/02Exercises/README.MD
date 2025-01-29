@@ -12,3 +12,4 @@ Turns out I was right it worked just fine.
 
 <p>spiral graph</p>
 <img src="https://raw.githubusercontent.com/Dmarabito/Daniel-Marabito-s-Portfolio/refs/heads/main/Python/LearnPytorch/02Exercises/SpiralGraphs.PNG" alt="spiral graph">
+<p>Also disclosure the plot_decision_boundary method was provided by the video's author.</p>
