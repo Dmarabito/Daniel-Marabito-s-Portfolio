@@ -1,4 +1,6 @@
-<p>Here are the exercise section for the torchvision section. The Questions are below.</p>
+<p>Here are the exercise section for the torchvision section. </br>
+So a key thing I decided to add that wasn't strictly necessary is I tried to make sure as many of the needed libraries were self installing as possible. This should make the script fairly light weight in terms of installing.
+The Questions are below.</p>
 
 <p>
 What are 3 areas in industry where computer vision is currently being used?</br>
