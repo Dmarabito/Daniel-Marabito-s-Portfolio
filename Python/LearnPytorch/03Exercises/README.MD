@@ -1,4 +1,4 @@
-<p>Here are the exercise section for the torchvision section.</p>
+<p>Here are the exercise section for the torchvision section. The Questions are below.</p>
 
 <p>
 What are 3 areas in industry where computer vision is currently being used?</br>
@@ -10,15 +10,15 @@ So here is my source for this <a href='https://aws.amazon.com/what-is/overfittin
 Data augmentation which is changing the data slightly each time the ai looks at it so that the noise can’t be learned.</br>
 Ensembling is using multiple machine learning models to make a prediction.</br>
 Pruning is removing less important parameters from a model.</br>
-[complete] Spend 20-minutes reading and clicking through the CNN Explainer website.</br>
+Spend 20-minutes reading and clicking through the CNN Explainer website.</br>
 Upload your own example image using the "upload" button and see what happens in each layer of a CNN as your image passes through it.</br>
-Load the torchvision.datasets.MNIST() train and test datasets. [complete]</br>
-Visualize at least 5 different samples of the MNIST training dataset. [complete]</br>
-Turn the MNIST train and test datasets into dataloaders using torch.utils.data.DataLoader, set the batch_size=32. [complete]</br>
-Recreate model_2 used in this notebook (the same model from the CNN Explainer website, also known as TinyVGG) capable of fitting on the MNIST dataset. [complete]</br>
-Train the model you built in exercise 8. on CPU and GPU and see how long it takes on each. [complete]</br>
-Make predictions using your trained model and visualize at least 5 of them comparing the prediction to the target label. [complete]</br>
-Plot a confusion matrix comparing your model's predictions to the truth labels.[complete]</br>
+Load the torchvision.datasets.MNIST() train and test datasets. </br>
+Visualize at least 5 different samples of the MNIST training dataset. </br>
+Turn the MNIST train and test datasets into dataloaders using torch.utils.data.DataLoader, set the batch_size=32. </br>
+Recreate model_2 used in this notebook (the same model from the CNN Explainer website, also known as TinyVGG) capable of fitting on the MNIST dataset.</br>
+Train the model you built in exercise 8. on CPU and GPU and see how long it takes on each.</br>
+Make predictions using your trained model and visualize at least 5 of them comparing the prediction to the target label.</br>
+Plot a confusion matrix comparing your model's predictions to the truth labels.</br>
 Create a random tensor of shape [1, 3, 64, 64] and pass it through a nn.Conv2d() layer with various hyperparameter settings (these can be any settings you choose), what do you notice if the kernel_size parameter goes up and down?</br>
 As kernel size increases the 2nd and 3rd dimension decreases. In the specific situation I tried it decreased in size by 1 per increase in kernel_size.</br>
 Use a model similar to the trained model_2 from this notebook to make predictions on the test torchvision.datasets.FashionMNIST dataset.</br>
